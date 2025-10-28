@@ -8,7 +8,7 @@ class MemTrans;
 	static logic [3:0] last_addr;
 
 	//Function constructor that initialize the default value of data and addr to 0
-	function new (logic [7:0] data_in = 8'h0, logic [3:0] addr = 8'h0);
+	function new (logic [7:0] data_in = 8'h0, logic [3:0] addr = 4'h0);
 		this.data_in = data_in;
 		this.addr = addr;
 
@@ -32,11 +32,11 @@ class MemTrans;
 endclass
 
 module tb;
-	Memtrans t1, t2;
+	MemTrans t1, t2;
 
 	initial begin
-		t1 = new.(.addr(4'h2));
-		t2 = new.(data_in(8'd3), .addr(4'h4));
+		t1 = new(.addr(4'h2));
+		t2 = new(.data_in(8'd3), .addr(4'h4));
 
 		//Assign new address value to t1 object
 		t1.addr = 4'hF;
@@ -51,7 +51,7 @@ module tb;
 		//Deallocate the object and check
 		t2 = null;
 		$display("t2 deallocated");
-		if (t2 == NULL)
+		if (t2 == null)
 			$display("t2 deallocated successfully");
 		#10 $finish;
 	end
