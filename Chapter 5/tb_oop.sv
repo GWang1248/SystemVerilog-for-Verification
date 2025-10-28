@@ -45,7 +45,8 @@ module tb;
 		t2.display();
 
 		$display("\n=== Using Static Method ===");
-		MemTrans::print_last_address(); //Dont need to point out t1 or t2 as last_address is static
+		MemTrans::print_last_address();
+		//Dont need to point out t1 or t2 as last_address is static
 
 		//Deallocate the object and check
 		t2 = null;

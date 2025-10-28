@@ -1,3 +1,5 @@
+//Static function cannot access non-static variable as it does not have "this" handle
+//But if an object is explicitly input into the function then i is still viable to access the variable
 class Packet;
     static int ctr = 0;
 
