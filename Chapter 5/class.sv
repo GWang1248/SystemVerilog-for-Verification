@@ -7,7 +7,7 @@ class myPacket;
 
 	//function new is called automatically upon creation of the object
 	function new (bit [2:0] header = 3'h1, bit [2:0] mode = 5);
-		//"this" is used to refer to current class, refer to it sown propoerties
+		//"this" indicates to assign the local variable "header" to the class variable "header"
 		this.header = header;
 		this.encode = 0;
 		this.mode = mode;
