@@ -29,10 +29,10 @@ endclass
 
 module tb;
 	initial begin
-		MyClass1 abc = new;
+		MyClass1 abc = new();
 		for (int i = 0; i < 10; i++) begin
 			abc.randomize();
-			$display ("mode=0x%0h mod_en=0x%0h", abc.mode, abc.mod_en);
+			$display ("mode = 0x%0h mod_en = 0x%0h", abc.mode, abc.mod_en);
 		end
 	end
 endmodule
