@@ -33,7 +33,7 @@ endclass
 module tb;
 
 	//Declare a mailbox and two component object
-	s_mbox m_mbx = new();
+	s_mbox m_mbx = new(); //Put in value inside to limit the size of a mailbox
 	comp1 m_comp1 = new();
 	comp2 m_comb2 = new();
 
@@ -49,3 +49,9 @@ module tb;
 		join
 	end
 endmodule
+
+//put() to put data into mailbox
+//get() to get data from mailbox
+//try_put() to check if mailbox is full
+//try_get() to check if mailbox is empty
+//peek() to obtain a copy of data inside the mailbox
